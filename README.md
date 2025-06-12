@@ -1,2 +1,2 @@
 # zmk-config-the-wolf-kb-50
-zmk config of the wolf kb (50keys)
+zmk config of the wolf kb (50keys) renamed to thewolfkb50

@@ -1,12 +1,13 @@
 file_format: "1"
 id: thewolfkb50
-name: thewolfkb
+name: thewolfkb50
 type: shield
-url: https://github.com/tayloryangyoyo/zml-config-the-wolf-kb
+url: https://github.com/tayloryangyoyo/zmk-config-the-wolf-kb-50
 requires: [pro_micro]
 features:
   - keys
+  - mouse
 siblings:
-  - thewolfkb_left
-  - thewolfkb_right
+  - thewolfkb50_left
+  - thewolfkb50_right
 
