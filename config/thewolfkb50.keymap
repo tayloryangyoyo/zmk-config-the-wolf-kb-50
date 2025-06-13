@@ -4,6 +4,13 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+	#define DEFAULT 0
+    #define NUMBER  1
+    #define KEYPAD  2
+    #define GAME    3
+    #define SYSTEM  4
+	#define MOUSE   5
+
     //新增複數按鍵的組合
     combos
     {
@@ -111,6 +118,13 @@
             bindings = <&mo 4>;
             layers = <0>;
         };
+
+		combo_mouse{
+            timeout-ms = <50>;
+            key-positions = <43 44>;
+            bindings = <&mo MOUSE>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -193,6 +207,15 @@
                 &bt BT_CLR    &none         &none         &none         &bootloader       &none  &none  &none  &none  &none>;
         };
 
-        
+        mouse_layer
+        {
+            bindings = <
+                &none  &none  &none  &none  &none      &none  &none  &none           &none            &none 
+                &none  &none  &none  &none  &none      &none  &none  &none           &msc MOVE_UP     &none 
+                &none  &none  &none  &none  &none      &none  &none  &msc MOVE_LEFT  &msc MOVE_DOWN   &msc MOVE_RIGHT 
+                &none  &none  &none  &none  &none      &none  &none  &mkp LCLK       &mmv MOVE_UP     &mkp RCLK 
+                &none  &none  &none  &none  &none      &none  &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT
+            >;
+        };
     };
 };
